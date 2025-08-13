@@ -1,23 +1,20 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    //how to compact data to pass to the view
-    $name = "amara";
-    $month = "september";
-    $date = "27th";
-
-    $favoriteClub = "liverpool";
-    $favoritePlayer = "salah";
-    $teamColor = "Red";
-
-    return view('welcome', compact('name','month','date', 'favoriteClub', 'favoritePlayer', 'teamColor'));
+    return view('welcome');
 });
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
 
-
-
-
-
+require __DIR__.'/auth.php';
