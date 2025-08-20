@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <section class="section">
+<section class="section">
   <div class="container">
     <div class="row g-0 justify-content-center">
       <div class="col-xl-9 col-lg-10">
@@ -10,9 +10,9 @@
           <div class="col-12">
             <ul class="list-inline breadcrumb-menu">
               <li class="list-inline-item">
-                <a class="text-link" href="{{route('home')}}">Home</a>
+                <a class="text-link" href="https://platol.netlify.app/">Home</a>
               </li>
-              <li class="list-inline-item">• &nbsp; <a class="text-link" href="{{route('about')}}">Categories</a>
+              <li class="list-inline-item">• &nbsp; <a class="text-link" href="https://platol.netlify.app/categories">Categories</a>
               </li>
             </ul>
           </div>
@@ -34,8 +34,8 @@
         <div class="tab-content" id="taxonomyLists">
           <div class="tab-pane show active" id="alphabetical-tab-pane" role="tabpanel" aria-labelledby="alphabetical-tab" tabindex="0">
             <div class="row g-2 taxonomy-lists">
-                @foreach ($categories as $category)
-                     <div class="col-md-4 col-6">
+              @foreach ($categories as $category)
+                    <div class="col-md-4 col-6">
                 <a class='text-dark px-3 py-2 d-flex lead bg-white' href='category-single.html'>
                   <div class="flex-grow-1">
                     <span class="sort-alphabetical">{{$category->name}} </span>
@@ -46,7 +46,7 @@
                   </div>
                 </a>
               </div>
-                @endforeach
+              @endforeach
 
 
             </div>
@@ -126,4 +126,5 @@
     </div>
   </div>
 </section>
+
 </x-guest-layout>

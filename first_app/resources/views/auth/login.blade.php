@@ -1,47 +1,40 @@
 <x-guest-layout>
     <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
-
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
-
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+    <!-- start newsletter -->
+    <section class="line-bg bg-white">
+        <div class="newsletter-block border-bottom">
+            <div class="container">
+                <div class="row gy-5 align-items-center justify-content-center text-center text-md-start">
+                    <div class="col-xl-5 col-lg-5 col-md-6 col-sm-10">
+                        <div class="pe-0 pe-xl-4">
+                            <h2 class="mb-3 lh-sm">Log Into Your account</h2>
+                            <p class="mb-0">don't have an account <a href="{{route('register')}}">Register</a></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-md-6">
+                        <div class="ps-0 ps-xl-4">
+                            <div id="mc_embed_signup">
+                                <form action="#" method="post" name="mc-embedded-subscribe-form" >
+                                    <div id="mc_embed_signup_scroll" class="input-group">
+                                        <input type="email" value="" name="email" class="form-control w-100"
+                                            placeholder="Email" aria-label="Name">
+                                        <input type="password" value="" name="password"
+                                            class="form-control w-100 required email" placeholder="enter your password"
+                                            aria-label="Subscription" autocomplete="new-email" required>
+                                        <div class="input-group-append w-100">
+                                            <button type="submit" name="subscribe" 
+                                                class="input-group-text w-100 mb-0" aria-label="Subscription Button">
+                                                Login Now <i class="ti ti-arrow-up-right ms-auto"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="remember">
-                <span class="ms-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Remember me') }}</span>
-            </label>
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
-
-            <x-primary-button class="ms-3">
-                {{ __('Log in') }}
-            </x-primary-button>
-        </div>
-    </form>
+    </section>
+    <!-- end newsletter -->
 </x-guest-layout>

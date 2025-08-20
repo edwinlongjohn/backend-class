@@ -63,19 +63,9 @@
           </div>
           <div class="collapse navbar-collapse" id="navHeader">
             <ul class="navbar-nav ms-auto">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class='dropdown-item' href='index.html'>Home 001</a>
-                  </li>
-                  <li>
-                    <a class='dropdown-item' href='index-2.html'>Home 02</a>
-                  </li>
-                  <li>
-                    <a class='dropdown-item' href='index-3.html'>Home 03</a>
-                  </li>
-                </ul>
+              <li class="nav-item ">
+                <a class="nav-link" href="<?php echo e(route('home')); ?>" role="button" >Home</a>
+
               </li>
               <li class="nav-item ">
                 <a class='nav-link' href='featured-posts.html'>Featured</a>
@@ -108,7 +98,7 @@
                     <a class='dropdown-item' href='tag-single.html'>Tag Single</a>
                   </li>
                   <li>
-                    <a class='dropdown-item' href='categories.html'>Categories</a>
+                    <a class='dropdown-item' href='<?php echo e(route('categories')); ?>'>Categories</a>
                   </li>
                   <li>
                     <a class='dropdown-item' href='category-single.html'>Category Single</a>
