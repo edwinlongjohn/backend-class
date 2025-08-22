@@ -23,15 +23,18 @@
                     <div class="col-xl-4 col-lg-5 col-md-6">
                         <div class="ps-0 ps-xl-4">
                             <div id="mc_embed_signup">
-                                <form action="#" method="post" name="mc-embedded-subscribe-form" >
+                                <form action="<?php echo e(route('login')); ?>" method="post"  ><?php echo csrf_field(); ?>
+                                    <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                        <p class="alert alert-danger text-danger"><?php echo e($error); ?></p>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     <div id="mc_embed_signup_scroll" class="input-group">
-                                        <input type="email" value="" name="email" class="form-control w-100"
+                                        <input type="email"  name="email" class="form-control w-100"
                                             placeholder="Email" aria-label="Name">
-                                        <input type="password" value="" name="password"
+                                        <input type="password"  name="password"
                                             class="form-control w-100 required email" placeholder="enter your password"
                                             aria-label="Subscription" autocomplete="new-email" required>
                                         <div class="input-group-append w-100">
-                                            <button type="submit" name="subscribe" 
+                                            <button type="submit" name="subscribe"
                                                 class="input-group-text w-100 mb-0" aria-label="Subscription Button">
                                                 Login Now <i class="ti ti-arrow-up-right ms-auto"></i>
                                             </button>
