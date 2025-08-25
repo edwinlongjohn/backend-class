@@ -1,5 +1,5 @@
 <x-guest-layout>
-
+    
 <!-- start of about intro -->
 <section class="section">
     <div class="container">
@@ -12,7 +12,7 @@
             <div class="col-12">
               <ul class="list-inline breadcrumb-menu">
                 <li class="list-inline-item">
-                  <a class="text-link" href="#">Home</a>
+                  <a class="text-link" href="https://platol.netlify.app/">Home</a>
                 </li>
                 <li class="list-inline-item">• &nbsp; <a class='text-link' href='about.html'>About Us</a>
                 </li>
@@ -33,7 +33,7 @@
     </div>
   </section>
   <!-- end of about intro -->
-
+  
   <!-- start of our-story -->
   <section class="section bg-white">
     <div class="container">
@@ -58,7 +58,7 @@
     </div>
   </section>
   <!-- end of our-story -->
-
+  
   <!-- start of authors -->
   <div class="section">
     <div class="container">
@@ -154,5 +154,5 @@
     </div>
   </div>
   <!-- end of authors -->
-
+  
 </x-guest-layout>
