@@ -16,6 +16,7 @@ class WelcomeController extends Controller
 
     public function category(){
         $categories = DB::table('categories')->orderBy('name', 'asc')->get(); // Assuming you have a 'categories' table
+        //dd($categories);
         return view('categories', compact('categories'));
     }
 }
