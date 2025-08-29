@@ -15,9 +15,9 @@
                         <div class="ps-0 ps-xl-4">
                             <div id="mc_embed_signup">
                                 <form action="{{route('login')}}" method="post"  >@csrf
-                                    @foreach ($errors->all() as $error)
+                                   @foreach ($errors->all() as $error)
                                         <p class="alert alert-danger text-danger">{{$error}}</p>
-                                    @endforeach
+                                   @endforeach
                                     <div id="mc_embed_signup_scroll" class="input-group">
                                         <input type="email"  name="email" class="form-control w-100"
                                             placeholder="Email" aria-label="Name">

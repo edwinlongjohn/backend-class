@@ -24,9 +24,9 @@
                         <div class="ps-0 ps-xl-4">
                             <div id="mc_embed_signup">
                                 <form action="<?php echo e(route('login')); ?>" method="post"  ><?php echo csrf_field(); ?>
-                                    <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                   <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <p class="alert alert-danger text-danger"><?php echo e($error); ?></p>
-                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                   <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     <div id="mc_embed_signup_scroll" class="input-group">
                                         <input type="email"  name="email" class="form-control w-100"
                                             placeholder="Email" aria-label="Name">

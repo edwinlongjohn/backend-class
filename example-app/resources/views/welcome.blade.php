@@ -15,7 +15,7 @@
     </div>
   </section>
   <!-- end of banner -->
-  
+
   <!-- start of Recent Posts -->
   <section class="section">
     <div class="container">
@@ -275,7 +275,7 @@
     </div>
   </section>
   <!-- end of Recent Posts -->
-  
+
   <!-- start of Top Authors -->
   <section class="section bg-white">
     <div class="container">
@@ -350,7 +350,7 @@
     </div>
   </section>
   <!-- end of Top Authors -->
-  
+
   <!-- start of Featured Posts -->
   <section class="featured-posts section">
     <div class="container">
@@ -504,7 +504,7 @@
     </div>
   </section>
   <!-- end of Featured Posts -->
-  
+
   <!-- start of Post of the month -->
   <section class="post-of-the-month" style="background-image:url('/guest_assets/assets/images/blog/post-of-the-month.webp')">
     <div class="container">
@@ -537,5 +537,5 @@
     </div>
   </section>
   <!-- end of Post of the month -->
-  
+
 </x-guest-layout>

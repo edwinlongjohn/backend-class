@@ -13,9 +13,9 @@
                     <div class="col-xl-4 col-lg-5 col-md-6">
                         <div class="ps-0 ps-xl-4">
                             <div id="mc_embed_signup">
-                                 @foreach ($errors->all() as $error)
+                                @foreach ($errors->all() as $error)
                                         <p class="alert alert-danger text-danger">{{$error}}</p>
-                                    @endforeach
+                                @endforeach
                                 <form action="{{route('register')}}" method="post" >@csrf
                                     <div id="mc_embed_signup_scroll" class="input-group">
                                         <input type="text"  name="name" class="form-control w-100"

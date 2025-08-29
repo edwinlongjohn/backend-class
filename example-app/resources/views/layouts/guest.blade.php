@@ -25,7 +25,7 @@
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="/guest_assets/assets/css/style.css">
-  
+
 </head>
 <body>
 
@@ -64,7 +64,7 @@
             <ul class="navbar-nav ms-auto">
               <li class="nav-item ">
                 <a class="nav-link" href="{{route('home')}}" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
-               
+
               </li>
               <li class="nav-item ">
                 <a class='nav-link' href='featured-posts.html'>Featured</a>
@@ -85,10 +85,10 @@
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class='dropdown-item' href='authors.html'>Authors</a>
+                    <a class='dropdown-item' href='{{route('login')}}'>Login</a>
                   </li>
                   <li>
-                    <a class='dropdown-item' href='author-single.html'>Author Single</a>
+                    <a class='dropdown-item' href='{{route('register')}}'>Register</a>
                   </li>
                   <li>
                     <a class='dropdown-item' href='tags.html'>Tags</a>
@@ -97,7 +97,7 @@
                     <a class='dropdown-item' href='tag-single.html'>Tag Single</a>
                   </li>
                   <li>
-                    <a class='dropdown-item' href='categories.html'>Categories</a>
+                    <a class='dropdown-item' href='{{route('category')}}'>Categories</a>
                   </li>
                   <li>
                     <a class='dropdown-item' href='category-single.html'>Category Single</a>
@@ -140,11 +140,11 @@
       <line x1="6" y1="6" x2="18" y2="18"></line>
     </svg>
   </div>
-  
+
   <div class="is-hidden">
     <input type="text" id="js-search-input" placeholder="Type to search blog.." aria-label="search-query">
   </div>
-  
+
   <div class="mt-4 pt-2 is-hidden popular-topics">
     <div class="post-meta">
       <div class="section-title mb-3">
