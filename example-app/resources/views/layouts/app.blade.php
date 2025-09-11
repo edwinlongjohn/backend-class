@@ -40,6 +40,14 @@
 
     <!-- Simplebar CSS -->
     <link rel="stylesheet" href="/admin_asset/assets/plugins/simplebar/simplebar.min.css">
+    <!-- Quill CSS -->
+    <link rel="stylesheet" href="/admin_asset/assets/plugins/quill/quill.snow.css">
+
+    <!-- Select2 CSS -->
+    <link rel="stylesheet" href="/admin_asset/assets/plugins/select2/css/select2.min.css">
+
+    <!-- Bootstrap Tagsinput CSS -->
+    <link rel="stylesheet" href="/admin_asset/assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css">
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="/admin_asset/assets/css/style.css" id="app-style">
@@ -399,8 +407,8 @@
                                         <span class="menu-arrow"></span>
                                     </a>
                                     <ul>
-                                        <li><a href="add-blog.html">Add Blog</a></li>
-                                        <li><a href="blogs.html">Blogs</a></li>
+                                        <li><a href="{{route('post.create')}}">Add Blog</a></li>
+                                        <li><a href="{{route('post.index')}}">Blogs</a></li>
                                         <li><a href="{{route('admin.categories')}}">Blog Categories</a></li>
                                         <li><a href="blog-comments.html">Blog Comments</a></li>
                                     </ul>
@@ -469,6 +477,14 @@
 	<script src="/admin_asset/assets/plugins/daterangepicker/daterangepicker.js" type="text/javascript"></script>
 	<script src="/admin_asset/assets/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
 
+     <!-- Quill JS -->
+    <script src="/admin_asset/assets/plugins/quill/quill.min.js" type="text/javascript"></script>
+
+    <!-- Select2 JS -->
+    <script src="/admin_asset/assets/plugins/select2/js/select2.min.js" type="text/javascript"></script>
+
+    <!-- Bootstrap Tagsinput JS -->
+    <script src="/admin_asset/assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js" type="text/javascript"></script>
     <!-- Main JS -->
     <script src="/admin_asset/assets/js/script.js" type="text/javascript"></script>
 
