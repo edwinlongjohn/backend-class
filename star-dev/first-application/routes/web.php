@@ -3,6 +3,15 @@
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [WelcomeController::class, 'index'])->name('home');
-
-Route::get('/about-us', [WelcomeController::class, 'aboutUs'])->name('about');
+Route::get('/', function(){
+    $namesOfStudents = [
+        'yusuf',
+        'ug',
+        'samuel',
+        'royce',
+        'amadi',
+        'clement',
+        'james'
+       ];
+    return view('home')->with('names', $namesOfStudents);
+});
