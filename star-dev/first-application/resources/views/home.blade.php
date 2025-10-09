@@ -7,15 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>
-        hello world here are the names of my students:
-    </h1>
+    <h1>Hello world here are the names of my students:</h1>
+
     <ul>
-         @foreach ($names as $name)
-            <li>
-                {{ $name }}
-            </li>
-       @endforeach
+        @foreach ($namesOfStudents as $name)
+             <li>{{$name}}</li>
+        @endforeach
+
     </ul>
 </body>
 </html>
