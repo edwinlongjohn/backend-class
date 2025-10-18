@@ -16,12 +16,16 @@
                                 <form action="{{route('register')}}" method="post" > @csrf
                                     <div id="mc_embed_signup_scroll" class="input-group">
                                         @foreach ($errors->all() as $error)
+                                            <p class="text-danger">{{$error}}</p>
+                                        @endforeach
+                                        @foreach ($errors->all() as $error)
                                             <p class="text-danger alert alert-danger">{{$error}}</p>
                                         @endforeach
-                                        <input type="text" name="name" value="{{old('name')}}"  class="form-control w-100"
-                                            placeholder="enter user name" aria-label="Name">
-                                        <input type="email" name="email" value="{{old('email')}}" class="form-control w-100" placeholder="Email"
-                                            aria-label="Name">
+                                        <input type="text" name="name"   class="form-control w-100"
+                                            placeholder="enter user name" aria-label="Name" required>
+                                        <input type="email" name="email"  class="form-control w-100" placeholder="Email"
+                                            aria-label="Name" required>
+
                                         <input type="password" name="password" class="form-control w-100 required email"
                                             placeholder="enter your password" aria-label="Subscription"
                                             autocomplete="new-email" >
