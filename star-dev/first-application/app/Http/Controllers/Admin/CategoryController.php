@@ -24,7 +24,7 @@ class CategoryController extends Controller
             'name' => $request->category_name,
             'status' => $request->status
         ]);
-
+        
         return back()->with('success', 'category created successfully');
     }
 
